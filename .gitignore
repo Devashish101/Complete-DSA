@@ -2,3 +2,5 @@
 *.out
 practice.cpp
 TempCode.cpp
+.vscode/
+.cph/
