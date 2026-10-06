@@ -149,10 +149,6 @@ else{
 // # include <iostream>
 // using namespace std;
 
-// int(){
-//   # include <iostream>
-// using namespace std;
-
 // int main(){
 //     int day_no;
 //     cout<<"enter day no";
