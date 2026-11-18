@@ -1,0 +1,32 @@
+Kruskal's Algorithm
+
+Data Structures:-
+vector<pair<int, pair<int,int>>> edges → stores {weight, {src, dest}}
+parent array → used for DSU
+rank / size array → used for Union by Rank/Size
+find() → finds the representative/leader of a vertex
+unionSet() → joins two different sets
+
+Algorithm:-
+Store all the edges of the graph in a vector: {weight, {src, dest}}
+Sort all the edges in increasing order of weight.
+Initialize DSU:
+    Initially, every vertex is its own parent.
+    parent[i] = i
+One by one, remove the smallest-weight edge from the sorted edge list.
+
+Let the edge be:{wt, {src, dest}}
+Find the parent/representative of both vertices:
+    p1 = find(src)
+    p2 = find(dest)
+If p1 == p2:
+Both vertices already belong to the same component.
+Adding this edge will create a cycle.
+So, skip this edge.
+Otherwise:
+    Add this edge to the MST.
+    Add wt to the total MST weight.
+    Perform unionSet(p1, p2) to merge the two components.
+
+Continue until the MST contains exactly:V - 1 edges
+The accumulated weight is the Minimum Spanning Tree weight.

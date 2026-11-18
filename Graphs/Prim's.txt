@@ -1,0 +1,24 @@
+// Prim's Algorithm
+
+// Data Structures:-
+// visited set → keeps track of vertices already included in MST
+// priority_queue<pair<wt, vrtx>> → stores edges based on weight
+// unordered_map<int, vector<pair<int,int>>> → adjacency list
+
+// Algorithm:-
+// Insert {-1, src} into the priority queue.
+// -1 is used because the source vertex has no parent edge.
+// While the priority queue is not empty:
+// Remove the root element from the priority queue.
+// Let it be {wt, vrtx}.
+// If vrtx is already present in visited:
+// Simply continue.
+// Otherwise:
+// Add vrtx to visited.
+// Add wt to the total MST weight.
+// If vrtx is not the source, add the corresponding edge to the MST.
+// Traverse all adjacent vertices of vrtx:
+// For every adjacent vertex nbr with edge weight edgeWt:
+// If nbr is not visited, insert {edgeWt, nbr} into the priority queue.
+// Repeat until the priority queue becomes empty.
+// The total weight accumulated is the Minimum Spanning Tree (MST) weight.
