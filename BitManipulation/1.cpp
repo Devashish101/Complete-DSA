@@ -26,7 +26,23 @@ int main(){
     return 0;
 }
 
-//                                                  Check if Odd or Even
+// Code to swap two numbers
+# include<iostream>
+using namespace std;
+
+int main(){
+    int a = 5, b = 7;
+
+    cout<<"Numbers Before swap are :"<<a<<" "<<b<<"\n";
+    a = a^b;
+    b = a^b;
+    a = a^b;
+    cout<<"Numbers After swap are :"<<a<<" "<<b<<"\n";
+}
+
+
+
+// TODO:Check if Odd or Even
 # include <iostream>
 using namespace std;
 
