@@ -40,8 +40,6 @@ int main(){
     cout<<"Numbers After swap are :"<<a<<" "<<b<<"\n";
 }
 
-
-
 // TODO:Check if Odd or Even
 # include <iostream>
 using namespace std;
